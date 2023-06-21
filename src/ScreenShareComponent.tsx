@@ -160,6 +160,7 @@ export const Controls = (props: {tracks: any, setStart: any, setInCall: any}) =>
         {trackState.video ? "MuteVideo" : "UnmuteVideo"}
       </p>
       {<p onClick={() => leaveChannel()}>Leave</p>}
+      
     </div>
   );
 };
