@@ -11,6 +11,9 @@ import {
   createMicrophoneAndCameraTracks,
 } from "agora-rtc-react";
 import '../src/screenShare.css'
+import 'bootstrap/dist/css/bootstrap.css';
+// Put any other imports below so that CSS from your
+// components takes precedence over default styles.
 
 const config: ClientConfig = { 
   mode: "rtc", codec: "vp8",
@@ -23,7 +26,6 @@ const ScreenShareComponent = () => {
   const [channelName, setChannelName] = useState("");
   return (
     <div>
-      <h1 className="heading">Agora RTC NG SDK React Wrapper</h1>
       {inCall ? (
         <VideoCall setInCall={setInCall} channelName={channelName} />
       ) : (
@@ -173,6 +175,8 @@ const ChannelForm = (props: {
   return (
     <form className="join">
       {appId === '18e512b7a111479da98f5952e3e8bb22' && <p style={{color: 'red'}}></p>}
+      <h1>Enter your Id for Video call</h1>
+      <p className="text-center">(You have to share this ID to your oponent for connect.)</p>
       <input type="text"
         placeholder="Enter Channel Name"
         onChange={(e) => setChannelName(e.target.value)}

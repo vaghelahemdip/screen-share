@@ -6,7 +6,16 @@ body {
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #F7F7F7;
+    background-color: #bc9a9a;
+    animation: demo 1s ease-in;
+  }
+  @keyframes demo{
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
   }
   
   .App{
@@ -16,6 +25,9 @@ body {
     justify-items: center;
     align-items: center;
     height: 90vh;
+    background: rgb(210,124,218);
+background: linear-gradient(to bottom, rgb(146, 124, 218) 0%, rgba(0,212,255,0.09585084033613445) 100%);
+/* background: linear-gradient(to bottom, rgba(210,124,218,1) 0%, rgba(0,212,255,0.09585084033613445) 100%); */
   }
   
   .heading {
@@ -104,17 +116,25 @@ body {
   }
   
   .join  button{
-    min-width: 200px;
-    padding: 12px 0;
+    padding: 5px 50px;
     text-align: center;
-    background-color: #38373A;
-    color: #F7F7F7;
-    border-width: 1px;
-    border-color: #F7F7F7;
-    border-style: solid;
-    font-size: 1rem;
+    border-radius: 25px;
+    font-size: 18px;
     font-weight: 400;
     cursor: pointer;
     display: block;
     margin: 0 auto;
+    border: 1px solid black;
+    color: black;
+    font-weight: 600;
+    font-size: 20px;
+    background: transparent;
+  }
+
+  .join button:hover{
+    background-color: rgb(133, 156, 205);
+    /* background: linear-gradient(to top, rgb(168, 144, 218) 0%, rgba(0,212,255,0.09585084033613445) 100%); */
+    border: 0;
+    color: white;
+    transition: all 0.8s ease-in;
   }
