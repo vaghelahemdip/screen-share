@@ -175,8 +175,8 @@ const ChannelForm = (props: {
   return (
     <form className="join">
       {appId === '18e512b7a111479da98f5952e3e8bb22' && <p style={{color: 'red'}}></p>}
-      <h1>Enter your Id for Video call</h1>
-      <p className="text-center">(You have to share this ID to your oponent for connect.)</p>
+      <h1 className="text-center">Enter your Id for Video call</h1>
+      <p className="text-center">You have to share this ID to your oponent for connect.</p>
       <input type="text"
         placeholder="Enter Channel Name"
         onChange={(e) => setChannelName(e.target.value)}
